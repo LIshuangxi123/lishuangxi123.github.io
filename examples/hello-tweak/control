@@ -6,5 +6,5 @@ Description: 演示包，只用来验证源能不能正常安装和显示，装�
 Maintainer: pbwk9999 <pbwk9999@example.com>
 Author: pbwk9999 <pbwk9999@example.com>
 Section: Tweaks
-Depiction: https://lishuangxi123.github.io/depictions/com.pbwk9999.demo/
-SileoDepiction: https://lishuangxi123.github.io/sileodepiction/com.pbwk9999.demo.json
+Depiction: https://pbwk9999.github.io/depictions/com.pbwk9999.demo/
+SileoDepiction: https://pbwk9999.github.io/sileodepiction/com.pbwk9999.demo.json
