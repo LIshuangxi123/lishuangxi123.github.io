@@ -5,11 +5,11 @@ Architecture: iphoneos-arm64
 Maintainer: pbwk9999 <pbwk9999@example.com>
 Author: pbwk9999 <pbwk9999@example.com>
 Section: Tweaks
-Depiction: https://lishuangxi123.github.io/depictions/com.pbwk9999.demo/
-SileoDepiction: https://lishuangxi123.github.io/sileodepiction/com.pbwk9999.demo.json
+Depiction: https://pbwk9999.github.io/depictions/com.pbwk9999.demo/
+SileoDepiction: https://pbwk9999.github.io/sileodepiction/com.pbwk9999.demo.json
 Filename: debs/com.pbwk9999.demo_1.0.0_iphoneos-arm64.deb
-Size: 1024
-MD5sum: cb1260686d8eb07d9ab474e73227547c
-SHA1: 0a03e5251c94466ef418d59e9a26e221338fa321
-SHA256: 0da11cac9729b5a054d2494d8e21a5666d8c4d551b9d3a7a0baabab82543f1fa
+Size: 1008
+MD5sum: 3ae6ac2a20e3f9f6eaae77cd5d2e635e
+SHA1: b355b84b563234f57a6109fde970266afc4748de
+SHA256: f43915833881beb7a5383a17167f613f0df7930997d942d0efb033faeb612ab8
 Description: 演示包，只用来验证源能不能正常安装和显示，装完可以顺手删掉。
