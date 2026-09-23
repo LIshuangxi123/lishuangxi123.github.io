@@ -1,0 +1,15 @@
+Package: com.pbwk9999.demo
+Name: 演示包
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: pbwk9999 <pbwk9999@example.com>
+Author: pbwk9999 <pbwk9999@example.com>
+Section: Tweaks
+Depiction: https://lishuangxi123.github.io/depictions/com.pbwk9999.demo/
+SileoDepiction: https://lishuangxi123.github.io/sileodepiction/com.pbwk9999.demo.json
+Filename: debs/com.pbwk9999.demo_1.0.0_iphoneos-arm64.deb
+Size: 1024
+MD5sum: cb1260686d8eb07d9ab474e73227547c
+SHA1: 0a03e5251c94466ef418d59e9a26e221338fa321
+SHA256: 0da11cac9729b5a054d2494d8e21a5666d8c4d551b9d3a7a0baabab82543f1fa
+Description: 演示包，只用来验证源能不能正常安装和显示，装完可以顺手删掉。
