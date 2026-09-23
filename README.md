@@ -3,16 +3,16 @@
 一套可以直接用的越狱源模板：Sileo / Zebra / Cydia 都能添加，索引由脚本自动生成，不需要装 dpkg。
 
 - 源名：**我真的没病**
-- 根地址：`https://lishuangxi123.github.io/`
+- 根地址：`https://pbwk9999.github.io/`
 - 你要做的：把 deb 丢进 `debs/`，跑一次构建，推上去
 
 ## 一、根地址与公开部署
 
-源地址：`https://lishuangxi123.github.io/`
+源地址：`https://pbwk9999.github.io/`
 
-这是 GitHub Pages 的「用户站点」地址，对应 GitHub 账号 `LIshuangxi123`。把仓库命名成 `lishuangxi123.github.io`（公开、默认分支 `main`、Pages 的 Source 选 `GitHub Actions`），推上去就是一个任何设备都能添加的公开源。末尾的 `/` 必须保留，客户端拼接 `Packages`、`Release`、deb 的相对路径时要靠它。
+这是 GitHub Pages 的「用户站点」地址，对应 GitHub 账号 `pbwk9999` 和同名仓库 `pbwk9999.github.io`（公开、默认分支 `main`、Pages 的 Source 选 `GitHub Actions`）。末尾的 `/` 必须保留，客户端拼接 `Packages`、`Release`、deb 的相对路径时要靠它。
 
-如果你想改用普通仓库的方式（比如仓库名叫 `pbwk9999.repo`），地址就变成 `https://lishuangxi123.github.io/pbwk9999.repo/`，那时改这三处即可：
+以后换地址时改这三处就够：
 
 1. `repo.conf` 里的 `REPO_URL`（影响 `Release` 和索引）
 2. `index.html` 里的 4 处（三个一键添加按钮加复制框）
