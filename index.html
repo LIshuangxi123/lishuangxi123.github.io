@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>我真的没病 · 插件源</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 24px; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    background: radial-gradient(120% 90% at 50% 0%, #1c2340 0%, #0b0d14 60%);
+    color: #f2f4f8;
+  }
+  .card {
+    width: 100%; max-width: 420px; padding: 28px 22px; border-radius: 22px;
+    background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(18px); text-align: center;
+  }
+  .icon { width: 96px; height: 96px; border-radius: 22px; display: block; margin: 0 auto 16px; }
+  h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: 1px; }
+  .sub { margin: 0 0 22px; font-size: 13px; color: #9aa3b8; }
+  .btn {
+    display: block; width: 100%; margin-bottom: 10px; padding: 14px 16px; border-radius: 14px;
+    font-size: 15px; font-weight: 600; text-decoration: none; color: #f2f4f8;
+    background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 0.12s ease, background 0.12s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn.primary { background: linear-gradient(135deg, #4b6bff, #7d4bff); border: none; }
+  .copy {
+    display: flex; align-items: center; gap: 8px; margin: 18px 0 10px; padding: 10px 10px 10px 14px;
+    border-radius: 14px; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .copy code { flex: 1; text-align: left; font-size: 13px; word-break: break-all; color: #c8d0e4; }
+  .copy button {
+    flex: none; padding: 8px 14px; border-radius: 10px; border: none; cursor: pointer;
+    font-size: 13px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, 0.16);
+  }
+  .hint { margin: 0; font-size: 12px; line-height: 1.6; color: #7d879c; }
+</style>
+</head>
+<body>
+<main class="card">
+  <img class="icon" src="CydiaIcon.png" alt="源图标">
+  <h1>我真的没病</h1>
+  <p class="sub">越狱插件源</p>
+  <a class="btn primary" href="sileo://source/https://lishuangxi123.github.io/">添加到 Sileo</a>
+  <a class="btn" href="zbra://sources/add/https://lishuangxi123.github.io/">添加到 Zebra</a>
+  <a class="btn" href="cydia://url/https://lishuangxi123.github.io/">添加到 Cydia</a>
+  <div class="copy">
+    <code id="url">https://lishuangxi123.github.io/</code>
+    <button id="copy" type="button">复制</button>
+  </div>
+  <p class="hint">按钮没反应的话，把上面的地址复制到 Sileo 的「来源 → 添加」里手动加。</p>
+</main>
+<script>
+  var btn = document.getElementById('copy');
+  var url = document.getElementById('url').textContent.trim();
+  btn.addEventListener('click', function () {
+    var done = function () {
+      btn.textContent = '已复制';
+      setTimeout(function () { btn.textContent = '复制'; }, 1500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, function () { fallback(); done(); });
+    } else {
+      fallback();
+      done();
+    }
+  });
+  function fallback() {
+    var range = document.createRange();
+    range.selectNodeContents(document.getElementById('url'));
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    try { document.execCommand('copy'); } catch (err) {}
+  }
+</script>
+</body>
+</html>
